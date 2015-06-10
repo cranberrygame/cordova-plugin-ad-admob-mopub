@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.cranberrygame.cordova.plugin.ad.admob.mopub"
-    version="1.0.1">
+    version="1.0.2">
 	
     <name>Cordova Admob-MoPub Mediation Plugin</name>
     <description>Cordova Admob-MoPub Mediation Plugin</description>
@@ -21,16 +21,21 @@
         <!-- dependency -->
         <framework src="src/android/mopub-sdk" custom="true" />
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-                <activity android:name="com.mopub.mobileads.MoPubActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-                <activity android:name="com.mopub.mobileads.MraidActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-                <activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize"/>
-                <activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+            <activity android:name="com.mopub.mobileads.MoPubActivity" 
+				android:configChanges="keyboardHidden|orientation|screenSize"/>
+            <activity android:name="com.mopub.mobileads.MraidActivity" 
+				android:configChanges="keyboardHidden|orientation|screenSize"/>
+            <activity android:name="com.mopub.common.MoPubBrowser" 
+				android:configChanges="keyboardHidden|orientation|screenSize"/>
+            <activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity" 
+				android:configChanges="keyboardHidden|orientation|screenSize"/>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
-              <uses-permission android:name="android.permission.INTERNET" />
-              <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-              <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-              <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<!-- optional -->			  
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         </config-file>
 		<!-- cranberrygame start: com.google.playservices -->
 <!--		
